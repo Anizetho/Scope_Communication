@@ -101,7 +101,7 @@ while i < n_traces:
 	scope.write('CURVE?')
 	traces[i] = scope.read_raw()
 	# traces[n_mean*i+j] = scope.query_binary_values('CURV?', datatype='d', is_big_endian=True)
-	print str(i) + "/" + str(n_traces-1) + "  Capturing Traces ..."
+	print(str(i) + "/" + str(n_traces-1) + "  Capturing Traces ...")
 	i = i + 1
 	if i%1000==0:
 		with open('../../Data/AES_256/Measurement_'+str(Nth_measurement)+'/traces.txt', "wb") as f :

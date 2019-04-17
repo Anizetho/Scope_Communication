@@ -1,8 +1,12 @@
 # coding: utf-8
+from __future__ import print_function
+
+import struct
 
 import ftd2xx
 import time
 import numpy as np
+import sys
 
 #################################################################################
 ############# Connect to FT2232H and Configure it to 245 Sync Fifo ##############
@@ -19,7 +23,7 @@ h.setFlowControl(0x0100, 0x0, 0x0)		# Avoid packet losses
 h.setTimeouts(200,200)					# set RX/TX timeouts
 h.purge(1)								#Purge RX Buffer
 h.purge(2)
-print("FT223H configured")
+#print("FT223H configured")
 
 #################################################################################
 #################### AES 256 INPUTS : Import correct files ######################
@@ -54,7 +58,7 @@ for x in plaintexts:
 	i = i + 1
 # pt_string représente les pltxts en hexa.
 # pt_string commence par 03 pour être reconnu comme pltxt.
-print('Files of Python_2 loaded')
+#print('Files of Python_2 loaded')
 
 ##################### SEND DATA TO FPGA AND COLLECT TRACES ######################
 data = np.zeros((n_traces,1))
@@ -68,9 +72,27 @@ h.write(key_string)
 h.write(pt_string[0])
 h.read(16).encode('hex')
 
-with open('../../Data/AES_256/Condition' + '.txt', "r") as f:
-    condition = int(f.read())
+#with open('../../Data/AES_256/Condition' + '.txt', "r") as f:
+    #condition = int(f.read())
     #print(condition)
-h.write(pt_string[condition])
-ciphertext[condition] = h.read(16).encode('hex')
-#print(ciphertext[condition])
+
+for line in sys.stdin:
+    data_ints = struct.unpack('<' + 'B' * len(line), line)
+    if len(line)==2:
+        number1 = data_ints[0]
+        number2 = data_ints[1]
+        if number2 != 0:
+            num = number1 + ((number2 * 255) + 1)
+        else :
+            num = number1 + (number2 * 255)
+        print(num, end='')
+
+    if len(line)==1 and data_ints[0]!=0:
+        number1 = data_ints[0]
+        number2 = 0
+        num = number1 + (number2 * 255)
+        print(num, end='')
+
+    h.write(pt_string[num])
+    ciphertext[num] = h.read(16).encode('hex')
+    #print(ciphertext[num])

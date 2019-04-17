@@ -8,16 +8,9 @@ from picosdk.constants import PICO_STATUS
 Python wrapper for PicoScope 5244D (PicoSDK 10.6.13.58 64-bit)
 Thales Belgium
 
-version: 0.1 (Mar. 2019)
+version: 0.0 (Feb. 2019)
 author: Francois Durvaux
 mail: francois.durvaux@be.thalesgroup.com
-
-version history
-0.0
-    - initial set of functions
-0.1
-    - external trigger support added
-    - timebase can be set by user
 
 '''
 
@@ -67,27 +60,6 @@ class PicoScope:
         self.status['set' + channel.upper()] = ps.ps5000aSetChannel(self.chandle, _channel, 0, 0, 0, 0)
         self.channel_info[channel.upper()] = {'enabled': False}
         assert_pico_ok(self.status['set' + channel.upper()])
-
-    def flush(self):
-        buf = (ctypes.c_int16 * self.noSamples)()
-        overflow = ctypes.c_int16()
-        cnoSamples = ctypes.c_int32(self.noSamples)
-        for channel in self.channel_info.keys():
-            if self.channel_info[channel]['enabled']:
-                _channel = ps.PS5000A_CHANNEL['PS5000A_CHANNEL_' + channel.upper()]
-                self.status['setBuffer_' + channel.upper()] = ps.ps5000aSetDataBuffer(self.chandle, _channel, ctypes.byref(buf), self.noSamples, 0, 0)
-                assert_pico_ok(self.status['setBuffer_' + channel.upper()])
-
-                flush_done = False
-                while (not flush_done):
-                    status = ps.ps5000aGetValues(self.chandle, 0, ctypes.byref(cnoSamples), 0, 0, 0, ctypes.byref(overflow))
-                    flush_done = status==PICO_STATUS['PICO_NO_SAMPLES_AVAILABLE']
-                    # if(flush_done):
-                    #     print('Channel ' + channel + ': nothing left to flush')
-                    # else:
-                    #     print('Channel ' + channel + ': flushed')
-
-            
 
     def getChannelInfo(self,channel):
         return self.channel_info[channel.upper()]
@@ -165,12 +137,8 @@ class PicoScope:
         maxADC = ctypes.c_int16()
         self.status['maximumValue'] = ps.ps5000aMaximumValue(self.chandle, ctypes.byref(maxADC))
         assert_pico_ok(self.status['maximumValue'])
-        if(channel.upper()=='EXT'):
-            _channel = ps.PS5000A_CHANNEL['PS5000A_EXTERNAL']
-            _voltage_range = ps.PS5000A_RANGE['PS5000A_5V']
-        else:
-            _channel = ps.PS5000A_CHANNEL['PS5000A_CHANNEL_' + channel.upper()]
-            _voltage_range = ps.PS5000A_RANGE['PS5000A_' + self.channel_info[channel]['voltage_range']]
+        _channel = ps.PS5000A_CHANNEL['PS5000A_CHANNEL_' + channel.upper()]
+        _voltage_range = ps.PS5000A_RANGE['PS5000A_' + self.channel_info[channel]['voltage_range']]
         _threshold_ADC = int(mV2adc(threshold_mV, _voltage_range, maxADC))
         _direction = ps.PS5000A_THRESHOLD_DIRECTION['PS5000A_' + direction.upper()]
         self.status["trigger"] = ps.ps5000aSetSimpleTrigger(self.chandle, 1, _channel, _threshold_ADC, _direction, delay_samples, timeout_ms)
@@ -181,28 +149,23 @@ class PicoScope:
             'direction': direction.upper(),
             'delay_samples': delay_samples}
 
-    def setSamplingParameters(self,preTrigger_ns,postTrigger_ns,timebase=0,samplingFrequency_kHz=0):
+    def setSamplingParameters(self,preTrigger_ns,postTrigger_ns,samplingFrequency_kHz=0):
 
         timeInterval_ns = ctypes.c_float()
         maxSamples = ctypes.c_int32()
 
-        # The timebase is set to 0 by default in order to find the maximum sampling frequency.
-        # To sample at a lower sampling frequency, it must be specified by the user with the timebase parameter.
-        # Information on the timebase parameters (depending on various other parameters) can be found in the API doc.
-        self.timebase = timebase
+        if(samplingFrequency_kHz==0):
+            timebase_invalid = True
+            while timebase_invalid:
+                self.status['getTimebase2'] = ps.ps5000aGetTimebase2(self.chandle, self.timebase, 0, ctypes.byref(timeInterval_ns), ctypes.byref(maxSamples), 0)
+                timebase_invalid = self.status['getTimebase2']==PICO_STATUS['PICO_INVALID_TIMEBASE']
+                if timebase_invalid:
+                    self.timebase +=1
 
-        # if(samplingFrequency_kHz==0):
-        timebase_invalid = True
-        while timebase_invalid:
-            self.status['getTimebase2'] = ps.ps5000aGetTimebase2(self.chandle, self.timebase, 0, ctypes.byref(timeInterval_ns), ctypes.byref(maxSamples), 0)
-            timebase_invalid = self.status['getTimebase2']==PICO_STATUS['PICO_INVALID_TIMEBASE']
-            if timebase_invalid:
-                self.timebase +=1
-
-        # else:
-        #     # TODO
-        #     print('CUSTOM SAMPLING FREQUENCY NOT YET SUPPORTED')
-        #     return -1
+        else:
+            # TODO
+            print('CUSTOM SAMPLING FREQUENCY NOT YET SUPPORTED')
+            return -1
 
         self.preTrigger_ns = preTrigger_ns
         self.postTrigger_ns = postTrigger_ns

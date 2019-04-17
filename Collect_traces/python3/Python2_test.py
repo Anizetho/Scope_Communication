@@ -3,6 +3,8 @@
 import ftd2xx
 import time
 import numpy as np
+from __future__ import print_function
+import sys
 
 #################################################################################
 ############# Connect to FT2232H and Configure it to 245 Sync Fifo ##############
@@ -68,9 +70,11 @@ h.write(key_string)
 h.write(pt_string[0])
 h.read(16).encode('hex')
 
-with open('../../Data/AES_256/Condition' + '.txt', "r") as f:
-    condition = int(f.read())
+#with open('../../Data/AES_256/Condition' + '.txt', "r") as f:
+    #condition = int(f.read())
     #print(condition)
-h.write(pt_string[condition])
-ciphertext[condition] = h.read(16).encode('hex')
+for line in sys.stdin:
+    print(line, end='')
+    h.write(pt_string[line])
+    ciphertext[line] = h.read(16).encode('hex')
 #print(ciphertext[condition])

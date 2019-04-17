@@ -4,6 +4,8 @@ import time
 import numpy as np
 import subprocess
 import PicoScope5244D as ps
+from subprocess import Popen, PIPE
+import sys
 import matplotlib.pyplot as plt
 
 #################################################################################
@@ -12,16 +14,13 @@ import matplotlib.pyplot as plt
 
 pico = ps.PicoScope()
 pico.setResolution(resolution='12bit')
-pico.setChannel(channel='A',coupling_type='AC',voltage_range='50mV',probe=1) # Mesures
+pico.setChannel(channel='A',coupling_type='DC',voltage_range='100mV',probe=10) # Mesures
 #pico.setChannel(channel='B',coupling_type='DC',voltage_range='500mV',probe=1) # Trigger
 pico.disableChannel(channel='B')
 
-pico.setSimpleTrigger(channel='ext',threshold_mV=40,direction='rising',delay_samples=100,timeout_ms=5000)
-pico.setSamplingParameters(preTrigger_ns=0,postTrigger_ns=1500,timebase=3)
+pico.setSimpleTrigger(channel='ext',threshold_mV=40,direction='rising',delay_samples=320,timeout_ms=0)
+pico.setSamplingParameters(preTrigger_ns=0,postTrigger_ns=900,timebase=1)
 print("Picoscope configured")
-samplingParameters = pico.getSamplingParameters()
-print(samplingParameters)
-
 
 #################################################################################
 ################################ Load info files ################################
@@ -41,40 +40,40 @@ with open('../../Data/AES_256/Measurement_'+str(Nth_measurement)+'\pt_fpga.txt')
     n_traces  = nb_plaintexts
 
 print('Files of Python_3 loaded')
-print('Waiting stabilization of picoscope...')
 
 
 #################################################################################
 ################################ Collect traces #################################
 #################################################################################
 
-pico.flush()
-python2_command = 'C:\Python27\python.exe Python2.py arg1'
+python2_command = 'C:\Python27\python.exe Python2_test.py arg1'
 trace_A = ['']*n_traces
 pico.run()
 i=0
 while i < n_traces:
 
     ### Write the condition for the python 2 script ###
-    with open('../../Data/AES_256/Condition' + '.txt', "w") as f:
-        f.write(str(i))
+    #with open('../../Data/AES_256/Condition' + '.txt', "w") as f:
+    #    f.write(str(i))
 
     # Delay to stabilize the channels
     if i==0:
-        time.sleep(0)
+        time.sleep(35)
 
     ### Call Python 2 ###
-    process = subprocess.Popen(python2_command.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-    if i == 0:
-        with open('../../Data/AES_256/Python2Files' + '.txt', "w") as f:
-            f.write(str(output))
-        with open('../../Data/AES_256/Python2Files' + '.txt', "r") as f:
-            outputFile = f.readlines()
-            for elem in outputFile:
-                print(elem[2:19])  # FTDX
-                print(elem[21:45]) # FilesPython2
-        print("Starting...")
+    with Popen(python2_command.split(), stdin=PIPE, stdout=PIPE) as proc:
+        output, error = proc.communicate((i).to_bytes(2, sys.byteorder))
+        #print(output)
+
+        if i == 0:
+            with open('../../Data/AES_256/Python2Files' + '.txt', "w") as f:
+                f.write(str(output))
+            with open('../../Data/AES_256/Python2Files' + '.txt', "r") as f:
+                outputFile = f.readlines()
+                for elem in outputFile:
+                    print(elem[2:19])  # FTDX
+                    print(elem[21:45]) # FilesPython2
+            print("Starting...")
 
     pico.waitForTrigger()
 
@@ -92,18 +91,19 @@ while i < n_traces:
                 f.write(str(x) + ' ')
             f.write('\n')
 
-    pico.run()
 
     print(str(i+1) + "/" + str(n_traces) + "  Capturing Traces ...")
     i = i + 1
 
+    pico.run()
+
     # Save traces in file
-    #if i % 1000 == 0:
-    with open('../../Data/AES_256/Measurement_'+str(Nth_measurement)+'/traces.txt', "wt") as f:
-        for x in trace_A:
-            for elem in x:
-                f.write(str(elem) + ' ')
-            f.write('\n')
+    if i % 1000 == 0:
+        with open('../../Data/AES_256/Measurement_'+str(Nth_measurement)+'/traces.txt', "wt") as f:
+            for x in trace_A:
+                for elem in x:
+                    f.write(str(elem) + ' ')
+                f.write('\n')
 
 #################################################################################
 ########################### Save Picoscope parameters ###########################

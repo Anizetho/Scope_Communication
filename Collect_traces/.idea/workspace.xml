@@ -2,27 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1919a02-b05b-4444-8e1d-f57eb5c8ffaf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/MainPy2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SecondPy3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/execnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collect_traces_False_key_python3_only.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Collect_traces_Python3_Only.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python2_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python3_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/PicoScope5244D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/Python2_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/Python3_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/counter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python3/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-wrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Scope_Communication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Scope_Communication.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Thales.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Thales.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/collect_traces.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/collect_traces_key_schedule.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSO5_20181204_152658.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_Oscillo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PicoScope5244D.py" beforeDir="false" afterPath="$PROJECT_DIR$/PicoScope5244D.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/collect_traces.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect_traces.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collect_traces_key_schedule_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Key_Schedule_Measurements/Measurement_10/ciphertext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Key_Schedule_Measurements/Measurement_10/key.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Key_Schedule_Measurements/Measurement_10/pt_fpga.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Key_Schedule_Measurements/Measurement_10/scope_parameters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Key_Schedule_Measurements/Measurement_10/traces.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Measurement_10/key.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Measurement_10/pt_fpga.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Data/Measurement_10/scope_parameters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collect_traces_python3.py" beforeDir="false" afterPath="$PROJECT_DIR$/collect_traces_python3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_fpga.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_fpga.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cipher_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cipher_test.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,48 +40,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/collect_traces.py">
+        <entry file="file://$PROJECT_DIR$/Collect_traces_Python3_Only.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
               <folding>
-                <element signature="e#17#30#0" expanded="true" />
+                <element signature="e#17#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainPy2.py">
+        <entry file="file://$PROJECT_DIR$/Collect_traces_False_key_python3_only.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="1610">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
               <folding>
-                <element signature="e#17#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SecondPy3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="29" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="29" />
-              <folding>
-                <element signature="e#17#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collect_traces_python3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-              <folding>
-                <element signature="e#17#30#0" expanded="true" />
+                <element signature="e#17#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,8 +66,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_fpga.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <state relative-caret-position="221">
+              <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,6 +90,9 @@
       <find>10</find>
       <find>read_raw</find>
       <find>CURVE</find>
+      <find>data</find>
+      <find>ciphertext</find>
+      <find>key_string</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,7 +106,6 @@
         <option value="$PROJECT_DIR$/Data/collect_traces_key_schedule.py" />
         <option value="$PROJECT_DIR$/collect_traces_key_schedule_test.py" />
         <option value="$PROJECT_DIR$/Test_Oscillo.py" />
-        <option value="$PROJECT_DIR$/test_fpga.py" />
         <option value="C:/Python36/Lib/site-packages/ftd2xx/ftd2xx.py" />
         <option value="$PROJECT_DIR$/collect_traces_picoscope.py" />
         <option value="$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/test-wrapper.py" />
@@ -129,13 +117,18 @@
         <option value="$PROJECT_DIR$/MainPy2.py" />
         <option value="$PROJECT_DIR$/SecondPy3.py" />
         <option value="$PROJECT_DIR$/collect_traces.py" />
-        <option value="$PROJECT_DIR$/collect_traces_python3.py" />
         <option value="$PROJECT_DIR$/collect_traces.py" />
+        <option value="$PROJECT_DIR$/Python3.py" />
+        <option value="$PROJECT_DIR$/collect_traces_python3.py" />
+        <option value="$PROJECT_DIR$/Collect_traces_False_key_python3_only.py" />
+        <option value="$PROJECT_DIR$/Collect_traces_Python3_Only.py" />
+        <option value="$PROJECT_DIR$/test_fpga.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
+    <option name="y" value="-12" />
     <option name="width" value="1302" />
     <option name="height" value="1532" />
   </component>
@@ -145,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,7 +150,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,8 +174,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.collect_traces_python3">
-    <configuration name="MainPy2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Collect_traces_Python3_Only">
+    <configuration name="Collect_traces_False_key_python3_only" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Thales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -194,7 +187,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MainPy2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Collect_traces_False_key_python3_only.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,7 +196,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="SecondPy3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Collect_traces_Python3_Only" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Thales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -215,7 +208,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SecondPy3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Collect_traces_Python3_Only.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Thales" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -237,27 +251,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/collect_traces_python3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="execnet" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Thales" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/execnet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -288,19 +281,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.MainPy2" />
-      <item itemvalue="Python.SecondPy3" />
-      <item itemvalue="Python.execnet" />
       <item itemvalue="Python.collect_traces_python3" />
       <item itemvalue="Python.test_fpga" />
+      <item itemvalue="Python.Python3" />
+      <item itemvalue="Python.Collect_traces_Python3_Only" />
+      <item itemvalue="Python.Collect_traces_False_key_python3_only" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.collect_traces_python3" />
+        <item itemvalue="Python.Collect_traces_Python3_Only" />
         <item itemvalue="Python.test_fpga" />
-        <item itemvalue="Python.MainPy2" />
-        <item itemvalue="Python.execnet" />
-        <item itemvalue="Python.SecondPy3" />
+        <item itemvalue="Python.Collect_traces_False_key_python3_only" />
+        <item itemvalue="Python.collect_traces_python3" />
+        <item itemvalue="Python.Python3" />
       </list>
     </recent_temporary>
   </component>
@@ -321,12 +314,12 @@
     <frame x="-6" y="-6" width="1293" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37549722" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18297534" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30793157" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30793157" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39968896" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,33 +416,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/picoscope-0.5/picoscope-0.5/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="72" lean-forward="true" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/ps5000aBlockExample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#268#281#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collect_traces_picoscope.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#17#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/picoscope-0.5/picoscope-0.5/setup.py" />
+    <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/ps5000aBlockExample.py" />
+    <entry file="file://$PROJECT_DIR$/collect_traces_picoscope.py" />
     <entry file="file://C:/Python27/Lib/site-packages/picosdk/functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-221">
@@ -460,28 +429,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/PicoScope5244D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/PicoScope5244D.py" />
     <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/test_file.py" />
     <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/Sémaphore.py" />
-    <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/test-wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="82" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/picoscope/picoscope/wrapper-python_0.0/test-wrapper.py" />
     <entry file="file://$PROJECT_DIR$/../../../PyCharm/CommunicationPython2&amp;3/Scope_Communication/Collect_traces/Python2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -489,37 +440,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execnet.py">
+    <entry file="file://$PROJECT_DIR$/execnet.py" />
+    <entry file="file://$PROJECT_DIR$/MainPy2.py" />
+    <entry file="file://$PROJECT_DIR$/SecondPy3.py" />
+    <entry file="file://$PROJECT_DIR$/Python2_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="326">
+          <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="68" column="24" lean-forward="true" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python3_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/attack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1479">
+          <caret line="18" column="101" selection-start-line="18" selection-start-column="101" selection-end-line="18" selection-end-column="101" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/collect_traces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
-          <folding>
-            <element signature="e#17#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainPy2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="e#17#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SecondPy3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="29" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding>
             <element signature="e#17#30#0" expanded="true" />
           </folding>
@@ -528,18 +496,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/collect_traces_python3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+        <state relative-caret-position="1122">
+          <caret line="78" column="57" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
           <folding>
             <element signature="e#17#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Collect_traces_False_key_python3_only.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_fpga.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        <state relative-caret-position="221">
+          <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Collect_traces_Python3_Only.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
